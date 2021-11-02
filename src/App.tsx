@@ -7,7 +7,6 @@ import MainPage from "./routes/MainPage";
 function App() {
   return <div className="App">
     <MainPage />
-    <Results />
   </div>;
 }
 
