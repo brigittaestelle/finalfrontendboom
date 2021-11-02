@@ -8,6 +8,6 @@ if (!baseUrl) {
 }
 
 export default function fetchMedicalData(): Promise<MedicalData[]> {
-  return axios.get<MedicalData[]>(`${baseUrl}/shoutouts`).then((res) => res.data);
+  return axios.get<MedicalData[]>(`${baseUrl}`).then((res) => res.data);
 }
 // unsure about line 11
