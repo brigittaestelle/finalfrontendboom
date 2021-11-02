@@ -1,4 +1,4 @@
-import fetchMedicalData from "../services/fetchMedicalData.tsx"
+import fetchMedicalData from "../services/fetchMedicalData"
 import MedicalData from "../models/MedicalData";
 import { useEffect, useState } from "react";
 
