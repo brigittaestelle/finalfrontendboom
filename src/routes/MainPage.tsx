@@ -20,6 +20,14 @@ const MainPage = () => {
     <p>
         Think of this as a jumping off place to kickstart your search for some answers you've been seeking.
     </p>
+    <label htmlFor="">Pick A Topic</label>
+    <select name="topic" id="medTopic">
+        <option value="">Example Topic 1</option>
+        <option value="">Example Topic 2</option>
+        <option value="">Example Topic 3</option>
+        <option value="">Example Topic 4</option>
+    </select>
+    <button>Search</button>
         </div>
     )
 };
