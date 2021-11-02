@@ -1,14 +1,14 @@
 import MedicalData from "../models/MedicalData";
 
 interface Props {
-  shoutouts: ShoutOut[];
+  medicalData: MedicalData[];
 }
 
-export default function ShoutoutList({ shoutouts }: Props) {
+export default function ShoutoutList({ medicalData }: Props) {
   return (
     <div>
       <ul>
-        {shoutouts.map((shoutout, index) => {
+        {medicalData.map((shoutout, index) => {
           return (
             <li key={index}>
               <p>Shoutout To:{shoutout.to}</p>

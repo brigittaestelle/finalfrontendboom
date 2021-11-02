@@ -7,7 +7,7 @@ const MainPage = () => {
     const [MedicalData, useMedicalData] = useState()
     return (
         <div>
-            <ShoutoutList/>
+            <DataList/>
         </div>
     )
 };
