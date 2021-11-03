@@ -1,6 +1,6 @@
 import MedicalData from "../models/MedicalData";
 import axios from "axios";
-const baseUrl = "https://health.gov/myhealthfinder/api/v3/topicsearch.html?";
+const baseUrl = "https://health.gov/myhealthfinder/api/v3/topicsearch.json?";
 // const baseUrl = process.env.REACT_APP_API_URL;
 
 if (!baseUrl) {
