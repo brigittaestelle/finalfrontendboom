@@ -12,9 +12,9 @@ export default function fetchMedicalData(): Promise<MedicalData[]> {
   .get<MedicalData[]>(`${baseUrl}`,{
     params:{
       lang: "en",
-      topicId:
+      topicId: 
 
-    }
+    },
   })
   .then((res) => res.data);
 }
