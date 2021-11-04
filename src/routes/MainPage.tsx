@@ -1,5 +1,5 @@
 import fetchMedicalData from "../services/fetchMedicalData";
-import MedicalData from "../models/MedicalData";
+import { MedicalData } from "../models/MedicalData";
 import { useEffect, useState } from "react";
 import {
   BrowserRouter as Router,

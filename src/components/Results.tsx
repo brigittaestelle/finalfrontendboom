@@ -1,7 +1,9 @@
+import fetchMedicalData from "../services/fetchMedicalData"
+
 export default function Results(){
     return(
         <div>
-            <h1>Hello Results</h1>
+            <button onClick= {() => {fetchMedicalData()}}> Please Work</button>
         </div>
     )
 }
