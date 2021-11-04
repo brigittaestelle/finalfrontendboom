@@ -1,5 +1,6 @@
-import {MedicalData, ResourceEntity} from "../models/MedicalData";
+import {MedicalData, ResourceEntity, Resources} from "../models/MedicalData";
 import axios from "axios";
+import { queryHelpers } from "@testing-library/dom";
 const baseUrl = "https://health.gov/myhealthfinder/api/v3/topicsearch.json?";
 // const baseUrl = process.env.REACT_APP_API_URL;
 
@@ -7,9 +8,14 @@ if (!baseUrl) {
   console.error("Missing config REACT_APP_API_URL");
 }
 
-export default function fetchMedicalData(): Promise<ResourceEntity[]> {
+export default function fetchMedicalData(resource: Resources): Promise<ResourceEntity[]> {
   return axios
-  .get<ResourceEntity[]>(`${baseUrl}TopicId=530`)
+  .get<ResourceEntity[]>(`${baseUrl}`, {
+    params: {
+      lang: "en",
+      topicId: resource
+    }
+  })
   .then((res) => {
     console.log(res.data);
     return res.data });}
