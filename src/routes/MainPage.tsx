@@ -15,34 +15,39 @@ const MainPage = () => {
   return (
     <div>
       <Router>
-
-
-{/* OUR HEADER OF NAVIGATIONAL LINKS */}          
-        <NavLink to="/">Home</NavLink>
+        {/* OUR HEADER OF NAVIGATIONAL LINKS */}
+        <NavLink to="/">
+          <img
+            src="images/StartingPointLogo.png"
+            alt="Starting Line Of Race"
+            width="250px"
+          />
+        </NavLink>
         <NavLink to="/archives">Archives</NavLink>
-        <NavLink to="/medjournal" exact>Med Journal</NavLink>
+        <NavLink to="/medjournal" exact>
+          Med Journal
+        </NavLink>
         <NavLink to="/login">Log In</NavLink>
         <NavLink to="/signup">Sign Up</NavLink>
-       
-{/* BEGINNING OF OUR SWITCH "PANEL" */}       
-        <Switch>
 
-{/* MEDJOURNAL */}            
+        {/* BEGINNING OF OUR SWITCH "PANEL" */}
+        <Switch>
+          {/* MEDJOURNAL */}
           <Route path="/medjournal" exact>
             <MedJournal />
           </Route>
 
-{/* ARCHIVES */}          
+          {/* ARCHIVES */}
           <Route path="/archives" exact>
-              <Archives />
+            <Archives />
           </Route>
 
-{/* RESULTS */}
+          {/* RESULTS */}
           <Route path="/results" exact>
             <Results />
           </Route>
 
-{/* MAIN PAGE */}
+          {/* MAIN PAGE */}
           <Route path="/" exact>
             <h1>Starting Point</h1>
             <p>
