@@ -1,10 +1,10 @@
 import { Resources } from "../models/MedicalData"
 import fetchMedicalData from "../services/fetchMedicalData"
 
-export default function Results({Resource}:Resources){
+export default function Results(){
     return(
         <div>
-            {Resource.Title}
+
             <button onClick= {() => {fetchMedicalData()}}> Please Work</button>
         </div>
     )

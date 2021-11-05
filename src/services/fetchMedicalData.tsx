@@ -8,12 +8,11 @@ if (!baseUrl) {
   console.error("Missing config REACT_APP_API_URL");
 }
 
-export default function fetchMedicalData(resource: Resources): Promise<ResourceEntity[]> {
+export default function fetchMedicalData(): Promise<ResourceEntity[]> {
   return axios
   .get<ResourceEntity[]>(`${baseUrl}`, {
     params: {
-      lang: "en",
-      topicId: resource
+      categoryId: 109
     }
   })
   .then((res) => {
