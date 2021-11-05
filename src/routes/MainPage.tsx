@@ -10,6 +10,7 @@ import {
 import MedJournal from "../components/MedJournal";
 import Results from "../components/Results";
 import Archives from "../components/Archives";
+import logo from "./images/StartingPointLogo.png";
 
 const MainPage = () => {
   return (
