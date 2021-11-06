@@ -1,0 +1,27 @@
+body {
+  font-family: "Nanum Myeongjo", serif;
+  color: #00a8a8;
+}
+
+.HeaderLink {
+  margin-left: 20px;
+  margin-top: 50px;
+
+  text-decoration: none;
+  padding: 10px;
+}
+
+.HeaderLink:hover {
+  cursor: pointer;
+}
+
+h1 {
+  font-size: 4rem;
+  font-style: bold;
+  background-color: #aeb6bf;
+  align-self: center;
+  margin-left: 50px;
+  margin-right: 50px;
+
+  border-radius: 15%;
+}

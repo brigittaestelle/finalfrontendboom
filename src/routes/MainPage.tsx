@@ -10,26 +10,32 @@ import {
 import MedJournal from "../components/MedJournal";
 import Results from "../components/Results";
 import Archives from "../components/Archives";
-import logo from "./images/StartingPointLogo.png";
+import "./MainPage.css";
 
 const MainPage = () => {
   return (
     <div>
       <Router>
         {/* OUR HEADER OF NAVIGATIONAL LINKS */}
-        <NavLink to="/">
+        <NavLink className="HeaderLink" to="/">
           <img
             src="images/StartingPointLogo.png"
             alt="Starting Line Of Race"
             width="250px"
           />
         </NavLink>
-        <NavLink to="/archives">Archives</NavLink>
-        <NavLink to="/medjournal" exact>
+        <NavLink className="HeaderLink" to="/archives">
+          Archives
+        </NavLink>
+        <NavLink className="HeaderLink" to="/medjournal" exact>
           Med Journal
         </NavLink>
-        <NavLink to="/login">Log In</NavLink>
-        <NavLink to="/signup">Sign Up</NavLink>
+        <NavLink className="HeaderLink" to="/login">
+          Log In
+        </NavLink>
+        <NavLink className="HeaderLink" to="/signup">
+          Sign Up
+        </NavLink>
 
         {/* BEGINNING OF OUR SWITCH "PANEL" */}
         <Switch>

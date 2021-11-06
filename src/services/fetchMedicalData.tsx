@@ -1,4 +1,4 @@
-import {MedicalData, ResourceEntity, Resources} from "../models/MedicalData";
+import { MedicalData, ResourceEntity, Resources } from "../models/MedicalData";
 import axios from "axios";
 import { queryHelpers } from "@testing-library/dom";
 const baseUrl = "https://health.gov/myhealthfinder/api/v3/topicsearch.json?";
@@ -10,11 +10,14 @@ if (!baseUrl) {
 
 export default function fetchMedicalData(): Promise<ResourceEntity[]> {
   return axios
-  .get<ResourceEntity[]>(`${baseUrl}`, {
-    params: {
-      categoryId: 109
-    }
-  })
-  .then((res) => {
-    console.log(res.data);
-    return res.data });}
+    .get<ResourceEntity[]>(`${baseUrl}`, {
+      params: {
+        categoryId: 109,
+        // category: searchQuery,
+      },
+    })
+    .then((res) => {
+      console.log(res.data);
+      return res.data;
+    });
+}
