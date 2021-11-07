@@ -6,18 +6,22 @@ import {
   Route,
   Switch,
   NavLink,
+  Redirect
 } from "react-router-dom";
 import MedJournal from "../components/MedJournal";
 import Results from "../components/Results";
 import Archives from "../components/Archives";
 import "./MainPage.css";
 import MedicalTopicSearchForm from "../components/MedicalTopicSearchForm";
-
+import { ResourceEntity } from "../models/MedicalData";
 
 const MainPage = () => {
-  
+
+  const [topicSearchResponse, setTopicSearchResponse] = useState<ResourceEntity[]>();
+
   function onSubmit(searchQuery: string): void {
-    fetchMedicalData(searchQuery)
+    fetchMedicalData(searchQuery).then((data) => 
+    setTopicSearchResponse(data));
   }
 
   return (
@@ -71,7 +75,7 @@ const MainPage = () => {
             </p>
             
             <MedicalTopicSearchForm onSubmit={onSubmit} />
-
+      {topicSearchResponse && <Redirect to="/results" />}
           </Route>
         </Switch>
       </Router>

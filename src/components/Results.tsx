@@ -1,21 +1,14 @@
-import { Resources } from "../models/MedicalData";
+import { ResourceEntity, Resources } from "../models/MedicalData";
 import fetchMedicalData from "../services/fetchMedicalData";
 import { MedicalData } from "../models/MedicalData";
 import MedicalTopicSearchForm from "./MedicalTopicSearchForm";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Results() {
-  const [topicSearchResponse, setTopicSearchResponse] = useState<MedicalData>();
-
-  function onSubmit(searchQuery: string): void {
-    fetchMedicalData(searchQuery)
-  }
-    // .then((data) => setTopicSearchResponse(data));
-
   return (
     <div>
       <h1>Search Results</h1>
-      <MedicalTopicSearchForm onSubmit={onSubmit} />
 
       {/* {topicSearchResponse?.map((hit, index) => ( */}
       {/* <p key={index}>one hit</p> */}
