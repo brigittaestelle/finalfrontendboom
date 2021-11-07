@@ -11,8 +11,15 @@ import MedJournal from "../components/MedJournal";
 import Results from "../components/Results";
 import Archives from "../components/Archives";
 import "./MainPage.css";
+import MedicalTopicSearchForm from "../components/MedicalTopicSearchForm";
+
 
 const MainPage = () => {
+  
+  function onSubmit(searchQuery: string): void {
+    fetchMedicalData(searchQuery)
+  }
+
   return (
     <div>
       <Router>
@@ -56,19 +63,15 @@ const MainPage = () => {
 
           {/* MAIN PAGE */}
           <Route path="/" exact>
+            
             <h1>Starting Point</h1>
             <p>
               Think of this as a jumping off place to kickstart your search for
               some answers you've been seeking.
             </p>
-            <label htmlFor="">Pick A Topic</label>
-            <select name="topic" id="medTopic">
-              <option value="">Example Topic 1</option>
-              <option value="">Example Topic 2</option>
-              <option value="">Example Topic 3</option>
-              <option value="">Example Topic 4</option>
-            </select>
-            <button>Search</button>
+            
+            <MedicalTopicSearchForm onSubmit={onSubmit} />
+
           </Route>
         </Switch>
       </Router>

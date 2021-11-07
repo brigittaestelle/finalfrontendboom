@@ -8,19 +8,15 @@ export default function Results() {
   const [topicSearchResponse, setTopicSearchResponse] = useState<MedicalData>();
 
   function onSubmit(searchQuery: string): void {
-    // fetchMedicalData(searchQuery).then((data) => setTopicSearchResponse(data));
+    fetchMedicalData(searchQuery)
   }
+    // .then((data) => setTopicSearchResponse(data));
+
   return (
     <div>
       <h1>Search Results</h1>
-      <button
-        onClick={() => {
-          fetchMedicalData();
-        }}
-      >
-        Get axios response
-      </button>
       <MedicalTopicSearchForm onSubmit={onSubmit} />
+
       {/* {topicSearchResponse?.map((hit, index) => ( */}
       {/* <p key={index}>one hit</p> */}
       {/* ))} */}
