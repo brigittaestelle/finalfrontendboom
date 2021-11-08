@@ -1,7 +1,22 @@
-export default function Notes(){
+import { NotesModel } from "../models/MedJournalModel"
+
+interface Props {
+    notes: NotesModel[];
+}
+
+export default function Notes({notes}:Props){
     return (
         <div>
-            <h1>I am the notes!</h1>
+            <ul>
+				{notes.map((entry, index) => {
+					return (
+						<li key={index}>
+							<h1>{entry.title}</h1>
+							<p>{entry.notes}</p>
+						</li>
+					);
+				})}
+			</ul>
         </div>
     )
 }

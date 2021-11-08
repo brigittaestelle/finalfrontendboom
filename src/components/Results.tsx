@@ -9,10 +9,10 @@ export default function Results() {
   return (
     <div>
       <h1>Search Results</h1>
+{/* {topicSearchResponse?.map((hit,index) => {
 
-      {/* {topicSearchResponse?.map((hit, index) => ( */}
-      {/* <p key={index}>one hit</p> */}
-      {/* ))} */}
+})} */}
+
     </div>
   );
 }

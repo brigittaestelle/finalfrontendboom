@@ -75,7 +75,7 @@ const MainPage = () => {
             </p>
             
             <MedicalTopicSearchForm onSubmit={onSubmit} />
-      {topicSearchResponse && <Redirect to="/results" />}
+      {topicSearchResponse && <Redirect to="/results"/>}
           </Route>
         </Switch>
       </Router>
