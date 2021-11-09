@@ -14,6 +14,8 @@ import Archives from "../components/Archives";
 import "./MainPage.css";
 import MedicalTopicSearchForm from "../components/MedicalTopicSearchForm";
 import { ResourceEntity } from "../models/MedicalData";
+import logo from "../components/StartingPointLogo.png";
+
 
 const MainPage = () => {
 
@@ -30,7 +32,7 @@ const MainPage = () => {
         {/* OUR HEADER OF NAVIGATIONAL LINKS */}
         <NavLink className="HeaderLink" to="/">
           <img
-            src="images/StartingPointLogo.png"
+            src={logo}
             alt="Starting Line Of Race"
             width="250px"
           />
@@ -68,12 +70,12 @@ const MainPage = () => {
           {/* MAIN PAGE */}
           <Route path="/" exact>
             
-            <h1>Starting Point</h1>
+          <h1>Starting Point</h1>
             <p>
-              Think of this as a jumping off place to kickstart your search for
-              some answers you've been seeking.
+              A jumping off place to kickstart your search for some answers
+              you've been seeking.
             </p>
-            
+
             <MedicalTopicSearchForm onSubmit={onSubmit} />
       {topicSearchResponse && <Redirect to="/results"/>}
           </Route>
