@@ -5,14 +5,24 @@ import MedicalTopicSearchForm from "./MedicalTopicSearchForm";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-export default function Results() {
+interface Props {
+  ourTopic: ResourceEntity[];
+}
+
+export default function Results({ ourTopic }: Props) {
+  {console.log(ourTopic)}
   return (
     <div>
       <h1>Search Results</h1>
-{/* {topicSearchResponse?.map((hit,index) => {
-
-})} */}
-
+      <ul>
+        {/* {ourTopic.map((article, index) => {
+          return (
+            <li key={index}>
+              <h1>{article.Title}</h1>
+            </li>
+          );
+        })} */}
+      </ul>
     </div>
   );
 }

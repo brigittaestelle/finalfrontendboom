@@ -1,8 +1,10 @@
 import { useState } from "react";
+import { useHistory } from "react-router-dom";
 
 export default function MedicalTopicSearchForm({
   onSubmit}:{ onSubmit: (searchQuery: string) => void;
 }) {
+  const history = useHistory();
   const [topicQuery, setTopicQuery] = useState("");
   return (
     <div className="MedicalSearchForm">
@@ -10,6 +12,7 @@ export default function MedicalTopicSearchForm({
         onSubmit={(e) => {
           e.preventDefault();
           onSubmit(topicQuery);
+          history.push("/results")
         }}
       >
 

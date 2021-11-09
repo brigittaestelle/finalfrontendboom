@@ -6,7 +6,9 @@ import {
   Route,
   Switch,
   NavLink,
-  Redirect
+  Redirect,
+  Link,
+  useHistory
 } from "react-router-dom";
 import MedJournal from "../components/MedJournal";
 import Results from "../components/Results";
@@ -19,12 +21,16 @@ import logo from "../components/StartingPointLogo.png";
 
 const MainPage = () => {
 
-  const [topicSearchResponse, setTopicSearchResponse] = useState<ResourceEntity[]>();
-
+  const [topicSearchResponse, setTopicSearchResponse] = useState<ResourceEntity[]>([]);
+  
+  
   function onSubmit(searchQuery: string): void {
     fetchMedicalData(searchQuery).then((data) => 
-    setTopicSearchResponse(data));
-  }
+    {
+      setTopicSearchResponse(data);
+    }
+
+    )}
 
   return (
     <div>
@@ -64,7 +70,7 @@ const MainPage = () => {
 
           {/* RESULTS */}
           <Route path="/results" exact>
-            <Results />
+            <Results ourTopic={topicSearchResponse}/>
           </Route>
 
           {/* MAIN PAGE */}
@@ -77,8 +83,10 @@ const MainPage = () => {
             </p>
 
             <MedicalTopicSearchForm onSubmit={onSubmit} />
-      {topicSearchResponse && <Redirect to="/results"/>}
+            
+      {/* {topicSearchResponse && <Redirect to="/results/"/>} */}
           </Route>
+          
         </Switch>
       </Router>
     </div>

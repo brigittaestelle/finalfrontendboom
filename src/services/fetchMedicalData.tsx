@@ -16,7 +16,7 @@ export default function fetchMedicalData(searchQuery:string): Promise<ResourceEn
       },
     })
     .then((res) => {
-      console.log(res.data);
+      console.log("this is from the fetch med data",res.data);
       return res.data;
     });
 }
