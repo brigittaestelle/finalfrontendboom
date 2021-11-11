@@ -36,7 +36,7 @@ export default function MedicalTopicSearchForm({
 
         <button>Search</button>
       </form>
-      <p>{topicQuery}</p>
+      {/* <p>{topicQuery}</p> */}
     </div>
   );
 }

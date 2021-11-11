@@ -34,20 +34,20 @@ const MainPage = () => {
       <Router>
         {/* OUR HEADER OF NAVIGATIONAL LINKS */}
         <NavLink className="HeaderLogo" to="/">
-          <img src={logo} alt="Starting Line Of Race" width="250px" />
+          <img src={logo} alt="Starting Line Of Race" width="250px" />  
         </NavLink>
-        <NavLink className="HeaderLink" to="/archives">
+        {/* <NavLink className="HeaderLink" to="/archives">
           Archives
-        </NavLink>
+        </NavLink> */}
         <NavLink className="HeaderLink" to="/medjournal" exact>
           Med/Journal
         </NavLink>
-        <NavLink className="HeaderLink" to="/login">
+        {/* <NavLink className="HeaderLink" to="/login">
           Log In
         </NavLink>
         <NavLink className="HeaderLink" to="/signup">
           Sign Up
-        </NavLink>
+        </NavLink> */}
 
         {/* BEGINNING OF OUR SWITCH "PANEL" */}
         <Switch>
