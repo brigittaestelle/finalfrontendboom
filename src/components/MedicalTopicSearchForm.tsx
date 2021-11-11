@@ -18,7 +18,7 @@ export default function MedicalTopicSearchForm({
         }}
       >
         <label className="Topic" htmlFor="">
-          Pick A Topic
+          <strong>Pick A Topic</strong>
         </label>
         <select
           value={topicQuery}

@@ -5,18 +5,24 @@ body {
 
 .HeaderLogo {
   background-color: #c67e50;
+  margin-top: 10%;
   margin-right: 50px;
-  margin-left: 50px;
+  margin-left: 100px;
   height: 100px;
   width: 100px;
+  display: flex;
+  align-items: center;
 }
 
 .HeaderLink {
   display: inline-block;
   font-style: italic;
+  font-size: medium;
   margin-right: 10px;
 
   background-color: #c67e50;
+  border: 4px inset lightgrey;
+  border-radius: 5px;
   height: 30px;
   width: 80px;
   color: white;
@@ -27,15 +33,16 @@ body {
 
 .HeaderLink:hover {
   cursor: pointer;
+  color: lightskyblue;
 }
 
 h1 {
   font-size: 4rem;
   font-style: bold;
   background-color: #aeb6bf;
-  align-self: center;
-  margin-left: 400px;
-  margin-right: 400px;
+
+  padding: 5px;
+  text-align: center;
 
   border-radius: 20%;
   border-style: double;
@@ -69,4 +76,16 @@ p {
   background-color: #c67e50;
   font-size: x-large;
   margin-right: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    font-size: 140%;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  h1 {
+    padding-left: 20%;
+    padding-right: 20%;
+  }
 }
