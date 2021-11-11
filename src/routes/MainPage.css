@@ -3,16 +3,26 @@ body {
   color: #00a8a8;
 }
 
-.HeaderLink {
-  margin-left: 20px;
-  margin-top: 50px;
+.HeaderLogo {
   background-color: #c67e50;
-  height: 20px;
-  width: 20px;
+  margin-right: 50px;
+  margin-left: 50px;
+  height: 100px;
+  width: 100px;
+}
+
+.HeaderLink {
+  display: inline-block;
+  font-style: italic;
+  margin-right: 10px;
+
+  background-color: #c67e50;
+  height: 30px;
+  width: 80px;
   color: white;
 
   text-decoration: none;
-  padding: 10px;
+  padding: 15px;
 }
 
 .HeaderLink:hover {
@@ -29,6 +39,18 @@ h1 {
 
   border-radius: 20%;
   border-style: double;
+}
+
+.Topic {
+  margin-right: 20px;
+  font-size: xx-large;
+}
+
+.MedJournalP {
+  font-family: "Poiret One", cursive;
+  color: #00a8a8;
+  background-color: white;
+  font-size: xx-large;
 }
 
 p {

@@ -8,7 +8,7 @@ import {
   NavLink,
   Redirect,
   Link,
-  useHistory
+  useHistory,
 } from "react-router-dom";
 import MedJournal from "../components/MedJournal";
 import Results from "../components/Results";
@@ -18,36 +18,29 @@ import MedicalTopicSearchForm from "../components/MedicalTopicSearchForm";
 import { ResourceEntity } from "../models/MedicalData";
 import logo from "../components/StartingPointLogo.png";
 
-
 const MainPage = () => {
+  const [topicSearchResponse, setTopicSearchResponse] = useState<
+    ResourceEntity[]
+  >([]);
 
-  const [topicSearchResponse, setTopicSearchResponse] = useState<ResourceEntity[]>([]);
-  
-  
   function onSubmit(searchQuery: string): void {
-    fetchMedicalData(searchQuery).then((data) => 
-    {
+    fetchMedicalData(searchQuery).then((data) => {
       setTopicSearchResponse(data);
-    }
-
-    )}
+    });
+  }
 
   return (
     <div>
       <Router>
         {/* OUR HEADER OF NAVIGATIONAL LINKS */}
-        <NavLink className="HeaderLink" to="/">
-          <img
-            src={logo}
-            alt="Starting Line Of Race"
-            width="250px"
-          />
+        <NavLink className="HeaderLogo" to="/">
+          <img src={logo} alt="Starting Line Of Race" width="250px" />
         </NavLink>
         <NavLink className="HeaderLink" to="/archives">
           Archives
         </NavLink>
         <NavLink className="HeaderLink" to="/medjournal" exact>
-          Med Journal
+          Med/Journal
         </NavLink>
         <NavLink className="HeaderLink" to="/login">
           Log In
@@ -70,23 +63,21 @@ const MainPage = () => {
 
           {/* RESULTS */}
           <Route path="/results" exact>
-            <Results ourTopic={topicSearchResponse}/>
+            <Results ourTopic={topicSearchResponse} />
           </Route>
 
           {/* MAIN PAGE */}
           <Route path="/" exact>
-            
-          <h1>Starting Point</h1>
+            <h1>Starting Point</h1>
             <p>
               A jumping off place to kickstart your search for some answers
               you've been seeking.
             </p>
 
             <MedicalTopicSearchForm onSubmit={onSubmit} />
-            
-      {/* {topicSearchResponse && <Redirect to="/results/"/>} */}
+
+            {/* {topicSearchResponse && <Redirect to="/results/"/>} */}
           </Route>
-          
         </Switch>
       </Router>
     </div>
