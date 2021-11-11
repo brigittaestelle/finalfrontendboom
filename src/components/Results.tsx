@@ -16,6 +16,14 @@ export default function Results({ ourTopic }: any) {
 
   {console.log("this is from results", ourTopic?.Result?.Resources?.Resource)}
   // {console.log("this is from results", ourTopic)}
+
+  const openInNewTab = (url: string): void => {
+    const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
+    if (newWindow) newWindow.opener = null
+  }
+  
+  const onClickUrl = (url: string): (() => void) => () => openInNewTab(url)
+
   return (
     <div>
       <h1>Search Results</h1>
@@ -25,7 +33,8 @@ export default function Results({ ourTopic }: any) {
           return (
             <li key={index}>
             <p>{article.Title}</p>
-            <a href={article.AccessibleVersion}>{article.AccessibleVersion}</a>
+            <button onClick={onClickUrl(`${article.AccessibleVersion}`)}>Take me to the resource</button>
+            {/* <p onClick(){}>{article.AccessibleVersion}</p> */}
              
 
             </li>
