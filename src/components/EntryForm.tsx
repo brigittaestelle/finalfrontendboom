@@ -1,16 +1,19 @@
 export default function EntryForm() {
-    return (
+  return (
+    <div>
+      <h2>Take notes here to prepare for your upcoming appointment</h2>
       <form>
-        <label>
+        <label className="EntryForm">
           Title:
-          <input type="text" name="title" />
+          <input className="box" type="text" name="title" />
         </label>
-        <label>
+        <label className="EntryForm">
           Entry:
-          <input type="textbox" name="entry" />
+          <input className="box" type="textbox" name="entry" />
         </label>
 
         <input type="submit" value="Submit" />
       </form>
-    );
-  }
+    </div>
+  );
+}
