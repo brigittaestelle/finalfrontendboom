@@ -49,6 +49,21 @@ h1 {
   list-style-type: none;
 }
 
+h2,
+h3 {
+  list-style-type: none;
+}
+
+li {
+  list-style-type: none;
+  display: flex;
+}
+
+.ApptDetails {
+  display: flex;
+  align-items: flex-end;
+}
+
 .Topic {
   margin-right: 20px;
   font-size: xx-large;
