@@ -17,6 +17,8 @@ import "./MainPage.css";
 import MedicalTopicSearchForm from "../components/MedicalTopicSearchForm";
 import { ResourceEntity } from "../models/MedicalData";
 import logo from "../components/StartingPointLogo.png";
+import ApptForm from "../components/ApptForm";
+import EntryForm from "../components/EntryForm";
 
 const MainPage = () => {
   const [topicSearchResponse, setTopicSearchResponse] = useState<
@@ -59,6 +61,14 @@ const MainPage = () => {
           {/* ARCHIVES */}
           <Route path="/archives" exact>
             <Archives />
+          </Route>
+
+          <Route path="/appointmentform" exact>
+            <ApptForm />
+          </Route>
+
+          <Route path="/entryform" exact>
+            <EntryForm />
           </Route>
 
           {/* RESULTS */}
