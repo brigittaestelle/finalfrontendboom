@@ -13,7 +13,7 @@ export default function Notes({notes}:Props){
 					return (
 						<li key={index}>
 							<Link to="/entryform">Add Note</Link>
-							<h1>{entry.title}</h1>
+							<h3>{entry.title}</h3>
 							<p>{entry.notes}</p>
 						</li>
 					);

@@ -13,7 +13,7 @@ export default function Appointments({appt}:Props){
                         return (
                             <li key={index}>
                                 <Link to="/appointmentform">Add Appointment</Link>
-                                <h1>{appointment.date}</h1>
+                                <h3>{appointment.date}</h3>
                                 <p>{appointment.time}</p>
                                 <p>{appointment.doctor}</p>
                                 <p>{appointment.reason}</p>

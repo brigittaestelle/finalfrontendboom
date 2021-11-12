@@ -32,6 +32,10 @@ export default function MedicalTopicSearchForm({
           <option value="104">Checkups For Children/Teens</option>
           <option value="100">Helping a Loved One</option>
           <option value="29">Shots/Vaccines</option>
+          <option value="127">Pregnancy</option>
+          <option value="126">Everyday Healthy Living</option>
+          <option value="29">Shots/Vaccines</option>
+          <option value="29">Shots/Vaccines</option>
         </select>
 
         <button>Search</button>
