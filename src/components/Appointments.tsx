@@ -1,4 +1,5 @@
 import {ApptModel}  from "../models/MedJournalModel"
+import { Link } from "react-router-dom"
 
 interface Props {
     appt: ApptModel[];
@@ -11,6 +12,7 @@ export default function Appointments({appt}:Props){
                     {appt.map((appointment, index) => {
                         return (
                             <li key={index}>
+                                <Link to="/appointmentform">Add Appointment</Link>
                                 <h1>{appointment.date}</h1>
                                 <p>{appointment.time}</p>
                                 <p>{appointment.doctor}</p>
