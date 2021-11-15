@@ -9,7 +9,7 @@ export default function EntryForm() {
         </label>
         <label className="EntryForm">
           Entry:
-          <input className="box" type="textbox" name="entry" />
+          <textarea className="box" name="entry" />
         </label>
 
         <input type="submit" value="Submit" />

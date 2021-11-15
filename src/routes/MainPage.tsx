@@ -19,6 +19,7 @@ import { ResourceEntity } from "../models/MedicalData";
 import logo from "../components/StartingPointLogo.png";
 import ApptForm from "../components/ApptForm";
 import EntryForm from "../components/EntryForm";
+import Appointments from "../components/Appointments";
 
 const MainPage = () => {
   const [topicSearchResponse, setTopicSearchResponse] = useState<
@@ -44,23 +45,12 @@ const MainPage = () => {
         <NavLink className="HeaderLink" to="/medjournal" exact>
           Med/Journal
         </NavLink>
-        {/* <NavLink className="HeaderLink" to="/login">
-          Log In
-        </NavLink>
-        <NavLink className="HeaderLink" to="/signup">
-          Sign Up
-        </NavLink> */}
 
         {/* BEGINNING OF OUR SWITCH "PANEL" */}
         <Switch>
           {/* MEDJOURNAL */}
           <Route path="/medjournal" exact>
             <MedJournal />
-          </Route>
-
-          {/* ARCHIVES */}
-          <Route path="/archives" exact>
-            <Archives />
           </Route>
 
           <Route path="/appointmentform" exact>
