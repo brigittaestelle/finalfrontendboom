@@ -21,22 +21,22 @@ export default function MedJournal() {
 
   return (
     <div>
-    <Router>
+    {/* <Router>
       <Switch>
         <Route path= "/appointments">
           <Appointments appt={apptJournal} />
         </Route>
         <Route path= "/notes">
         <Notes notes={notesJournal} />        
-        </Route>
+        </Route> */}
 
       <h1>Med Journal</h1>
       <h2 className="MedJournalP">Use this space to add Medical Notes</h2>
       <Appointments appt={apptJournal} />
       <Notes notes={notesJournal} />
-
+{/* 
     </Switch>
-    </Router>
+    </Router> */}
         </div>
   );
   

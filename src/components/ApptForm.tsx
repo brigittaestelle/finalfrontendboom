@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { addNewAppointment } from "../services/apptAPI";
+import { useHistory } from "react-router-dom";
 
 export default function ApptForm() {
 
@@ -7,12 +9,19 @@ export default function ApptForm() {
     const [doctor, setDoctor] = useState("");
     const [reason, setReason] = useState("");
     const [questions, setQuestions] = useState("");
-
+    const history = useHistory();
 
   return (
     <div>
       <h2>Record your appointment details here</h2>
-      <form method="POST" action="/appointments">
+      {/* <button onClick = {() => {
+          addNewAppointment("11/15/2021", "11:00AM", "Dr. Reggie", "Sprained Fingers", "My hands hurt")
+      }}>TEST</button> */}
+      <form onSubmit = {(e) => {
+          e.preventDefault();
+          addNewAppointment(date,time,doctor,reason,questions)
+          history.push("/medjournal")
+      }}>
         <label className="EntryForm">
           Date?
           <input className="box" type="text" name="date" value={date} onChange ={(e) => setDate(e.target.value)}/>
