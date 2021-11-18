@@ -1,7 +1,7 @@
 export interface NotesModel{
   _id?: string,
   title: string,
-  notes: string  
+  entry: string  
 }
 
 export interface ApptModel{

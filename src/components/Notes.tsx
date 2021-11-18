@@ -14,7 +14,7 @@ export default function Notes({notes}:Props){
 					return (
 						<li key={index}>
 							<h3>{entry.title}</h3>
-							<p>{entry.notes}</p>
+							<p>{entry.entry}</p>
 						</li>
 					);
 				})}
