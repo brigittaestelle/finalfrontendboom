@@ -25,6 +25,7 @@ export default function MedicalTopicSearchForm({
           onChange={(e) => {
             setTopicQuery(e.target.value);
           }}
+          // the value is now updated
           name="topic"
           id="medTopic"
         >
