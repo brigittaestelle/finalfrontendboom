@@ -38,7 +38,7 @@ export default function Results({ ourTopic }: any) {
               <li key={index}>
                 <div className="grid">
                   <p className="articleTitle">{article.Title}</p>
-                  <br></br>
+
                   <button
                     className="button"
                     onClick={onClickUrl(`${article.AccessibleVersion}`)}
@@ -46,7 +46,7 @@ export default function Results({ ourTopic }: any) {
                     Take me to the resource
                   </button>
                   <div className="resultsImg">
-                    <img src={article.ImageUrl} width="200" height="200" />
+                    <img src={article.ImageUrl} width="250" height="200" />
                   </div>
                 </div>
                 {/* <p onClick(){}>{article.AccessibleVersion}</p> */}
