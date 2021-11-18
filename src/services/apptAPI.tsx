@@ -20,5 +20,5 @@ export function addNewAppointment(date:string,time:string,doctor:string,reason:s
         doctor: doctor,
         reason: reason,
         questions: questions
-      });
+      }).then(res => res.data);
 }
