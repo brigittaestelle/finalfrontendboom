@@ -110,6 +110,24 @@ p {
   flex-wrap: wrap;
 }
 
+.grid {
+  display: flex;
+  gap: 10px;
+  column-gap: 40px;
+}
+.articleTitle {
+  color: #c67e50;
+  font-size: 3rem;
+  background-color: white;
+}
+.button {
+  justify-content: flex-start;
+}
+
+.resultsImg {
+  justify-content: flex-end;
+}
+
 @media screen and (min-width: 768px) {
   body {
     font-size: 140%;
