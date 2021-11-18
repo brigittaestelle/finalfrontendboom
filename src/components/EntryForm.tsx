@@ -14,7 +14,7 @@ export default function EntryForm() {
       <h2>Take notes here to prepare for your upcoming appointment</h2>
       <form  onSubmit = {(e) => {
           e.preventDefault();
-          addNewEntry(entry,title)
+          addNewEntry(title,entry)
           history.push("/medjournal")
       }}>
         <label className="EntryForm">
