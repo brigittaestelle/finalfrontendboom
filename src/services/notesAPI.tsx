@@ -10,3 +10,10 @@ export function fetchAllNotes():Promise<NotesModel[]>{
     return axios.get<NotesModel[]>(`${baseUrl}/mednotes`)
     .then(res => res.data);
 }
+
+export function addNewEntry(title:string,entry:string):Promise<NotesModel>{
+    return axios.post(`${baseUrl}/mednotes`, {
+        title: title,
+        entry: entry,
+      }).then(res => res.data);
+}

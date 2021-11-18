@@ -8,11 +8,11 @@ interface Props {
 export default function Notes({notes}:Props){
     return (
         <div>
+		<Link to="/entryform">Add Note</Link>
             <ul>
 				{notes.map((entry, index) => {
 					return (
 						<li key={index}>
-							<Link to="/entryform">Add Note</Link>
 							<h3>{entry.title}</h3>
 							<p>{entry.notes}</p>
 						</li>
